@@ -9,3 +9,18 @@
     margin-top: 8px;
     padding: 8px;
 }
+
+.codeblock {
+    background-color: #eee;
+    display: block;
+    margin-top: 15px;
+    padding: 8px;
+
+    
+}
+
+.codeblock pre {
+    margin: 16px 0;
+    padding: 4px;
+    background-color: #fff;
+}

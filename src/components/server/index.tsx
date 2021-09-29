@@ -33,7 +33,7 @@ export default function Server() {
         const players = data?.challenges?.[data?.currentChallenge]?.players || {};
         let tempCode = [];
         for (const code in players){
-            tempCode.push(players[code].solution);
+            tempCode.push(players[code]);
         }
         console.log({players, tempCode});
         setCode(tempCode);
@@ -93,8 +93,9 @@ export default function Server() {
                 <h4>GOOO</h4>
                 <button onClick={() => nextChallenge()}>Next Challenge</button>
                 { code.map((c: any) => 
-                  <div>
-                    <pre>{c}</pre>
+                  <div className={style.codeblock}>
+                    {c.name ?? 'anonymous'}
+                    <pre>{c.solution}</pre>
                   </div>
                 )}
               </div>

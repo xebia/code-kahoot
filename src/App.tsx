@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -26,17 +26,28 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase();
 
 function App() {
+  const [mode, setMode] = useState(0);
+
   if (!app) {
     return (<h1>Loading...</h1>);
   }
 
   return (
     <div className="App">
-      <div className="clientContainer">
-        <Client clientId="player1"></Client>      
-        <Client clientId="player2"></Client>      
-      </div>
-      <Server></Server>
+      {mode === 0 && 
+        <div>
+          <button onClick={() => setMode(1)}>Client mode</button>
+          <button onClick={() => setMode(2)}>Host mode</button>
+        </div>
+      }
+      { mode === 1 &&
+        <div className="clientContainer">
+          <Client clientId="player1"></Client>
+        </div>
+      }
+      { mode === 2 &&
+        <Server></Server>
+      }
     </div>
   );
 }
