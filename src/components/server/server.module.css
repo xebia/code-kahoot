@@ -1,3 +1,11 @@
 .container {
-    background-color: green;
+    background-color: #05BE70;
+    padding: 16px;
+}
+
+.section {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 8px;
+    padding: 8px;
 }

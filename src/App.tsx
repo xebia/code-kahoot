@@ -32,8 +32,10 @@ function App() {
 
   return (
     <div className="App">
-      <Client clientId="player1"></Client>      
-      <Client clientId="player2"></Client>      
+      <div className="clientContainer">
+        <Client clientId="player1"></Client>      
+        <Client clientId="player2"></Client>      
+      </div>
       <Server></Server>
     </div>
   );
