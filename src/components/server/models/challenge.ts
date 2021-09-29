@@ -26,10 +26,14 @@ export default class Challenge {
         },{});
     }
     
-    public constructor(description: string, unitTests: UnitTest[], playerSolutions: Solution[]){
+    public constructor(description: string, unitTests: UnitTest[]){
         this._description = description
         this._unitTests = unitTests;
-        this._playerSolutions = playerSolutions;
+        this._playerSolutions = [];
+    }
+
+    public addSolutions(...solutions: Solution[]){
+        this._playerSolutions.push(...solutions);
     }
 
 }
