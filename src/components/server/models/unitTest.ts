@@ -1,4 +1,4 @@
-export class UnitTest {
+export default class UnitTest {
 
     
     private _input : string;

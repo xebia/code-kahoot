@@ -1,5 +1,5 @@
 import Solution from './solution';
-import { UnitTest } from './unitTest';
+import UnitTest from './unitTest';
 
 export default class Challenge {
     private _description: string;
