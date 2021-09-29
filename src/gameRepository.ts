@@ -1,8 +1,8 @@
 import { getDatabase, ref, set, onValue } from "firebase/database";
 
-export function write(gameId: string, document: Object) {
+export function write(gameId: string, playerId: string, document: Object) {
     const db = getDatabase();
-    set(ref(db, 'game/' + gameId), document);
+    set(ref(db, 'game/' + gameId + "/" + playerId), document);
 
     console.log({method: 'write', data: document});
 }

@@ -18,3 +18,10 @@ button {
   cursor: pointer;
   user-select: none;
 }
+
+textarea {
+  padding: 8;
+  border: 1px solid white;
+  display: block;
+  margin-top: 12px;
+}
